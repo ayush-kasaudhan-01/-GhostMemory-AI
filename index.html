@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GhostMemory AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="fog fog-one"></div>
+    <div class="fog fog-two"></div>
+
+    <header class="navbar">
+        <div class="logo">
+            <span>☾</span> GhostMemory AI
+        </div>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            Local AI
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <p class="eyebrow">THE GHOST IN THE MACHINE</p>
+
+            <h1>
+                Memories that<br>
+                <span>refuse to disappear.</span>
+            </h1>
+
+            <p class="hero-text">
+                Turn a memory, story, or forgotten moment into an atmospheric
+                remembrance using open-weight AI running directly in your browser.
+            </p>
+
+            <div class="privacy-badge">
+                🔒 Your memories stay in your browser
+            </div>
+        </section>
+
+
+        <section class="workspace">
+
+            <div class="memory-card">
+
+                <div class="card-heading">
+                    <div>
+                        <p class="small-label">MEMORY INPUT</p>
+                        <h2>Leave something behind...</h2>
+                    </div>
+
+                    <span class="ghost-icon">👻</span>
+                </div>
+
+                <textarea
+                    id="memoryInput"
+                    placeholder="Write a memory, story, person, place, or moment you don't want to forget..."
+                ></textarea>
+
+                <div class="controls">
+
+                    <div class="select-wrapper">
+                        <label for="storyStyle">Style</label>
+
+                        <select id="storyStyle">
+                            <option value="remembrance">Gentle Remembrance</option>
+                            <option value="ghost">Ghost Story</option>
+                            <option value="poetic">Poetic Memory</option>
+                            <option value="letter">Letter From The Past</option>
+                        </select>
+                    </div>
+
+                    <button id="generateBtn">
+                        <span>✦</span>
+                        Awaken the Memory
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="output-card">
+
+                <div class="output-top">
+                    <div>
+                        <p class="small-label">THE MACHINE WHISPERS</p>
+                        <h2 id="outputTitle">Waiting for a memory...</h2>
+                    </div>
+
+                    <button id="copyBtn" class="icon-button" title="Copy">
+                        ⧉
+                    </button>
+                </div>
+
+                <div id="loader" class="loader hidden">
+                    <div class="loader-orbit"></div>
+
+                    <p id="loaderText">
+                        Awakening the local model...
+                    </p>
+                </div>
+
+                <div id="outputText" class="output-text">
+                    <span class="placeholder">
+                        Your generated remembrance will appear here.
+                    </span>
+                </div>
+
+                <div class="output-footer">
+                    <span>🤖 Open-weight AI</span>
+                    <span>•</span>
+                    <span>💻 Browser inference</span>
+                    <span>•</span>
+                    <span>🔒 Private</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="memory-wall-section">
+
+            <div class="section-heading">
+                <div>
+                    <p class="small-label">MEMORY WALL</p>
+                    <h2>Echoes saved on this machine</h2>
+                </div>
+
+                <button id="clearMemories" class="clear-btn">
+                    Clear all
+                </button>
+            </div>
+
+            <div id="memoryWall" class="memory-wall">
+                <!-- Memories added by JavaScript -->
+            </div>
+
+        </section>
+
+
+        <section class="about">
+
+            <div class="about-card">
+                <span class="about-icon">🕯️</span>
+
+                <h3>Why open AI?</h3>
+
+                <p>
+                    GhostMemory AI uses an open-weight model instead of sending
+                    personal memories to a closed AI service. The model runs
+                    locally in the browser, giving the user more control over
+                    their data and the technology behind the experience.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <span class="about-icon">🌐</span>
+
+                <h3>No AI API bill</h3>
+
+                <p>
+                    There is no per-request commercial AI API in this project.
+                    Once the model has been downloaded and cached, inference
+                    happens on the user's device.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <span class="about-icon">🧠</span>
+
+                <h3>Swappable intelligence</h3>
+
+                <p>
+                    Because the application is built around an open model
+                    interface, the model can be replaced with another compatible
+                    open model as the project evolves.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            GhostMemory AI · Built for Hacktoberfest ·
+            <span>Ghost in the Machine</span>
+        </p>
+    </footer>
+
+
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
